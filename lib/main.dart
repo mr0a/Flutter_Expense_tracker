@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
         amount: 800,
         date: DateTime.now()),
     Transaction(
-        id: 't2', title: 'Mess token', amount: 50, date: DateTime.now()),
+        id: 't2', title: 'Mess token', amount: 500, date: DateTime.now()),
   ];
 
   @override
@@ -56,16 +56,18 @@ class MyHomePage extends StatelessWidget {
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
+                                color: Colors.purple,
                               ),
                             ),
                             margin: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 10),
                             decoration: BoxDecoration(
                                 border:
-                                    Border.all(color: Colors.black, width: 2)),
+                                    Border.all(color: Colors.purple, width: 2)),
                             padding: EdgeInsets.all(5),
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 tx.title,
@@ -74,8 +76,7 @@ class MyHomePage extends StatelessWidget {
                               ),
                               Text(
                                 tx.date.toString(),
-                                style:
-                                    TextStyle(fontSize: 12, color: Colors.grey),
+                                style: TextStyle(color: Colors.grey),
                               )
                             ],
                           )
