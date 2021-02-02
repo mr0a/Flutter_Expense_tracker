@@ -15,5 +15,8 @@ A new Flutter project.
 ### intl
 - `intl` - package used for date formatting(as of now i know).
 
+### TextEditingController
+- `Controller` can be used to get input from user without changing the widget to stateful widget.
+
 ### Output
 ![Output image](output.png)
