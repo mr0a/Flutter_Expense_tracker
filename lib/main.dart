@@ -18,15 +18,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final List<Transaction> transactions = [];
-
-// Getting input with variable causes warning from flutter in stateless widget
-  // String titleInput;
-  // String amountInput;
-
-  final titleController = TextEditingController();
-  final amountController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

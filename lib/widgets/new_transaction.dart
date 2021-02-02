@@ -4,6 +4,10 @@ class NewTransaction extends StatelessWidget {
   final titleController = TextEditingController();
   final amountController = TextEditingController();
 
+  final Function txHandler;
+
+  NewTransaction(this.txHandler);
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -14,18 +18,16 @@ class NewTransaction extends StatelessWidget {
           children: <Widget>[
             TextField(
               decoration: InputDecoration(labelText: 'Title'),
-              // onChanged: (val) => titleInput = val,
               controller: titleController,
             ),
             TextField(
               decoration: InputDecoration(labelText: 'Amount'),
-              // onChanged: (val) => amountInput = val,
               controller: amountController,
             ),
             TextButton(
               onPressed: () {
-                // print(titleInput);
-                // print(amountInput);
+                txHandler(
+                    titleController.text, double.parse(amountController.text));
                 print(titleController.text);
               },
               child: Text('Add Transaction'),

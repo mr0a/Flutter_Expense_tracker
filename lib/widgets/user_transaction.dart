@@ -19,12 +19,20 @@ class _UserTransactionState extends State<UserTransaction> {
         id: 't2', title: 'Mess token', amount: 500, date: DateTime.now()),
   ];
 
+  void _addTransaction(String title, double amount) {
+    final newtx = Transaction(
+        id: 'tx', amount: amount, date: DateTime.now(), title: title);
+    setState(() {
+      _userTransactions.add(newtx);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        NewTransaction(),
-        TransactionList(),
+        NewTransaction(_addTransaction),
+        TransactionList(_userTransactions),
       ],
     );
   }
