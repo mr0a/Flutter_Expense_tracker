@@ -24,22 +24,24 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Flutter Expense Tracker'),
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            child: Card(
-              child: Text(
-                'Chart! Here come the charts',
-                textAlign: TextAlign.center,
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              child: Card(
+                child: Text(
+                  'Chart! Here come the charts',
+                  textAlign: TextAlign.center,
+                ),
+                // color: Colors.blue,
+                elevation: 10.0,
               ),
-              // color: Colors.blue,
-              elevation: 10.0,
+              width: double.infinity,
             ),
-            width: double.infinity,
-          ),
-          UserTransaction(),
-        ],
-        mainAxisAlignment: MainAxisAlignment.start,
+            UserTransaction(),
+          ],
+          mainAxisAlignment: MainAxisAlignment.start,
+        ),
       ),
     );
   }

@@ -18,5 +18,8 @@ A new Flutter project.
 ### TextEditingController
 - `Controller` can be used to get input from user without changing the widget to stateful widget.
 
+### SingleChildScrollView
+- Used to make our view scrollable.
+
 ### Output
 ![Output image](output.png)
