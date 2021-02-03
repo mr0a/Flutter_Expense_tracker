@@ -21,5 +21,8 @@ A new Flutter project.
 ### SingleChildScrollView
 - Used to make our view scrollable.
 
+### ListView
+- It is a widget like `Container` with `SingleChildScrollView`.
+
 ### Output
 ![Output image](output.png)
