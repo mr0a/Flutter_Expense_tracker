@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
-class NewTransaction extends StatelessWidget {
-  final titleController = TextEditingController();
-  final amountController = TextEditingController();
-
+// When flutter re-evaluates the widget it looses the data stored internally
+// if it is stateless widget, while in stateful widget UI and data are different
+class NewTransaction extends StatefulWidget {
   final Function txHandler;
 
   NewTransaction(this.txHandler);
+
+  @override
+  _NewTransactionState createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
+  final titleController = TextEditingController();
+
+  final amountController = TextEditingController();
 
   void submitData() {
     final enteredTitle = titleController.text;
@@ -16,7 +24,11 @@ class NewTransaction extends StatelessWidget {
       return;
     }
 
-    txHandler(enteredTitle, enteredAmount);
+    // Accessing properties from Widget class in stateclass using widget.
+    widget.txHandler(enteredTitle, enteredAmount);
+
+    // Closing the top most screen displayed
+    Navigator.of(context).pop();
   }
 
   @override
