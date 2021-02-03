@@ -33,5 +33,9 @@ A new Flutter project.
     - Memory and performance optimized.
     - Can be used for list with many or unknow items.
 
+### showModalBottomSheet
+- This widget is used to show a modal from bottom.
+- It needs context metadata and builder argument to which returns the widget to show in the modal.
+
 ### Output
 ![Output image](output.png)
