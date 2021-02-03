@@ -14,6 +14,7 @@ class TransactionList extends StatelessWidget {
       child: ListView.builder(
         itemCount: transactions.length,
         itemBuilder: (context, index) {
+          // context is a meta object given by flutter
           return Card(
             child: Row(
               children: [

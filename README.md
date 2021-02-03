@@ -26,10 +26,12 @@ A new Flutter project.
 - It need to be given fixed height or use builder to render when scrolled.
 - `ListView(children:[])` will build scrollable list from children widgets.
     - A disadvantage is that it also keeps the widgets not visible in the screen in the memory.
+    - Can be used for list with known items or less items.
 - `ListView.builder()` will build scrollable list but only renders the widget which will be visible in the screen.
     - It takes a required parameter `itemBuilder`.
     - `itemCount` parameter lets the method to decide when to render and how many item to render.
     - Memory and performance optimized.
+    - Can be used for list with many or unknow items.
 
 ### Output
 ![Output image](output.png)

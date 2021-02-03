@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
                   'Chart! Here come the charts',
                   textAlign: TextAlign.center,
                 ),
-                // color: Colors.blue,
+                color: Colors.blue,
                 elevation: 10.0,
               ),
               width: double.infinity,
