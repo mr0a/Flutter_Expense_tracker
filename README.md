@@ -37,5 +37,9 @@ A new Flutter project.
 - This widget is used to show a modal from bottom.
 - It needs context metadata and builder argument to which returns the widget to show in the modal.
 
+### Theme
+- `ThemeData` - Used to create the theme which can be used all over the app for coloring, text styling, etc.
+- `primarySwatch` is different from `primaryColor` because it automatically creates shades of a color and uses it in many places.
+
 ### Output
 ![Output image](output.png)
